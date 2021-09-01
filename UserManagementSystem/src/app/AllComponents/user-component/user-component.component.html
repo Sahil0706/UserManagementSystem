@@ -1,0 +1,81 @@
+<div style="background-color: rgb(233, 230, 230);">
+    &nbsp;
+</div>
+<div class="app" style="background-color: rgb(233, 230, 230);">
+    <div class="container" *ngFor='let u of ArrayOfAllUsers'>
+        <div class="app container"  style=" background-color: white;" >
+            <div class="row">          
+                <div style="margin-top: auto; margin-bottom: auto; margin-left: 3px;" class="col res-circle">
+                    <div class="circle-txt">
+                        {{u.fist_name[0]}}
+                    </div>
+                </div>
+                
+                <div style="margin-top: auto; margin-bottom: auto;" class="col">
+                    {{u.fist_name}} {{u.last_name}}
+                </div>
+                <div class="col" style="float: right;">
+                    <a href="#" (click)="edituser(u.email)"><i class="fa fa-pencil" style="color: black;"></i></a>&nbsp;
+                    <a href="#" (click)="DeleteUserAPI(u.email)"><i class="fa fa-trash" style="color: red;"></i></a>
+                </div>      
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+<div style="background-color: rgb(233, 230, 230);">
+    &nbsp;
+</div>
+
+<div id="editusers" (click)="edituser('ss')" *ngIf='EditMode'>
+
+    <div class="container" style="border: 1px solid black;">
+        <div style="margin-left: 10px; margin-right: 10px;" class="conatiner">
+            <div class="row">
+                <label>First Name</label>
+                <input type="text" value="{{SelectedUser.fist_name}}" placeholder="Enter your first name">
+            </div>
+            <div class="row">
+                <label>Last Name</label>
+                <input type="text" value="{{SelectedUser.last_name}}" placeholder="Enter your last name">
+            </div>
+            <div class="row">
+                <label>Profiles</label>
+                <select name="Profiles" id="Profile">
+                    <option >Select...</option>
+                    <option value="Value1">Value1</option>
+                    <option value="Value2">Value2</option>
+                    <option value="Value3">Value3</option>
+                  </select>
+            </div>
+            <div class="row">
+                <label>User Name</label>
+                <input type="text" value="{{SelectedUser.username}}" placeholder="Enter user name">
+            </div>
+            <div class="row">
+                <label>Email</label>
+                <input type="text" value="{{SelectedUser.email}}" placeholder="Enter email">
+            </div>
+            <div class="row">
+                <label>Password</label>
+                <input type="text" value="{{SelectedUser.pwd}}" placeholder="Enter Password">
+            </div>
+            <div class="row">
+                <p style="margin-top: 5px; text-align: right; float: right; position: relative;">
+                    <input type="button" (click)="cancel()" value = "Cancel">&nbsp;&nbsp;
+                    <input class="btn-success" (click)="editAPI(SelectedUser.email)" type="button" value = "Update">
+                </p>
+            </div>
+            <br>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</div>

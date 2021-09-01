@@ -1,0 +1,39 @@
+.res-circle {
+    /* (A) PERCENTAGE WIDTH & BORDER RADIUS */
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    max-width: 25px;
+  
+    /* (B) BACKGROUND COLOR */ 
+    background: #bcd6ff;
+   
+    /* (C) NECESSARY TO POSITION TEXT BLOCK */
+    line-height: 0;
+    position: relative;
+  }
+   
+  /* (E) TEXT BLOCK */
+  .circle-txt {
+    /* (E1) CENTER TEXT IN CIRCLE */
+    position: absolute;
+    bottom: 50%;
+    height: auto;
+    width: auto;
+    text-align: center;
+    margin-left: -5px;
+    /* (E2) THE FONT - NOT REALLY IMPORTANT */
+    font-family: arial, sans-serif;
+  }
+
+  .app {
+    display: grid;
+    grid-gap: 5px;
+    column-gap: 5px;
+    row-gap: 20px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-auto-rows: 50px;
+  }
+  label{
+    font-weight: bold;
+  }

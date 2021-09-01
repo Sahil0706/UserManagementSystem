@@ -1,0 +1,47 @@
+<div class="container" style="border: 1px solid black;">
+    <div class="row" style="border: 0.5px solid black;">
+        <p>
+            Add User
+            <a routerLink='/'>
+                <i style="float: right; position: relative;" class="fa fa-times" aria-hidden="true"></i>
+            </a>
+        </p>
+    </div>
+    <div style="margin-left: 10px; margin-right: 10px;" class="conatiner">
+        <div class="row">
+            <label>First Name</label>
+            <input type="text" [(ngModel)]="fist_name" placeholder="Enter your first name">
+        </div>
+        <div class="row">
+            <label>Last Name</label>
+            <input type="text" [(ngModel)]="last_name" placeholder="Enter your last name">
+        </div>
+        <div class="row">
+            <label>Profiles</label>
+            <select name="Profiles" id="Profile">
+                <option >Select...</option>
+                <option value="Value1">Value1</option>
+                <option value="Value2">Value2</option>
+                <option value="Value3">Value3</option>
+              </select>
+        </div>
+        <div class="row">
+            <label>User Name</label>
+            <input type="text" [(ngModel)]="username" placeholder="Enter user name">
+        </div>
+        <div class="row">
+            <label>Email</label>
+            <input type="text" [(ngModel)]="email" placeholder="Enter email">
+        </div>
+        <div class="row">
+            <label>Password</label>
+            <input type="text" [(ngModel)]="pwd" placeholder="Enter Password">
+        </div>
+        <div class="row">
+            <p style="margin-top: 5px; text-align: right; float: right; position: relative;">
+                <a class="btn btn-sm btn-light" style="border: 1px solid black;" routerLink='/'>Cancel</a>&nbsp;&nbsp;
+                <input class="btn-success" (click)="AddUserAPI()" type="button" value = "Add">
+            </p>
+        </div>
+        <br>
+    </div>
